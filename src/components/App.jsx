@@ -1,5 +1,7 @@
 import { Profile } from './Profile';
 import user from '../data/user.json';
+import { Statistics } from './Statistics';
+import statistics from '../data/data.json';
 export const App = () => {
   return (
     <div
@@ -13,6 +15,10 @@ export const App = () => {
       }}
     >
       <Profile userProfile={user} />
+
+      {statistics.map(item => (
+        <Statistics statistics={item} />
+      ))}
     </div>
   );
 };
