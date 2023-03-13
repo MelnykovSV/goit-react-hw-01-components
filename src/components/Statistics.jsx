@@ -1,14 +1,9 @@
-export function Statistics({ statistics: { id, label, percentage } }) {
+export function Statistics(props) {
   return (
     <section class="statistics">
       <h2 class="title">Upload stats</h2>
 
-      <ul class="stat-list">
-        <li class="item">
-          <span class="label">{label}</span>
-          <span class="percentage">{percentage}</span>
-        </li>
-      </ul>
+      <ul class="stat-list">{props.children}</ul>
     </section>
   );
 }

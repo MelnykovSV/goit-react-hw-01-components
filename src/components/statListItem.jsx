@@ -1,4 +1,4 @@
-export function Statistics({ statistics: { id, label, percentage } }) {
+export function StatListItem({ statistics: { id, label, percentage } }) {
   return (
     <li class="item">
       <span class="label">{label}</span>
