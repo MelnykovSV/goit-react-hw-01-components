@@ -5,6 +5,10 @@ import statistics from '../data/data.json';
 import { StatListItem } from './StatListItem';
 import { FriendList } from './FriendList';
 import { FriendListItem } from './FriendListItem';
+import { TransactionHistory } from './TransactionHistory';
+import { TransactionHistoryItem } from './TransactionHistoryItem';
+import transactions from '../data/transactions.json';
+
 import friendsList from '../data/friends.json';
 
 export const App = () => {
@@ -32,6 +36,11 @@ export const App = () => {
           <FriendListItem friendsList={item} />
         ))}
       </FriendList>
+      <TransactionHistory>
+        {transactions.map(item => (
+          <TransactionHistoryItem transactionData={item} />
+        ))}
+      </TransactionHistory>
     </div>
   );
 };
