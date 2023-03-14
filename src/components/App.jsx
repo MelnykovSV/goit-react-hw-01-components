@@ -3,6 +3,8 @@ import user from '../data/user.json';
 import { Statistics } from './Statistics';
 import statistics from '../data/data.json';
 import { StatListItem } from './StatListItem';
+import { FriendList } from './FriendList';
+import { FriendListItem } from './FriendListItem';
 export const App = () => {
   return (
     <div
@@ -22,6 +24,7 @@ export const App = () => {
           <StatListItem statistics={item} />
         ))}
       </Statistics>
+      <></>
     </div>
   );
 };
