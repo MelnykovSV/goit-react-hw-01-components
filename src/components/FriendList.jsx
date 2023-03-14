@@ -1,3 +1,3 @@
-export function FriendList() {
-  return <ul class="friend-list"></ul>;
+export function FriendList(props) {
+  return <ul class="friend-list">{props.children}</ul>;
 }

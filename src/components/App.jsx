@@ -5,6 +5,8 @@ import statistics from '../data/data.json';
 import { StatListItem } from './StatListItem';
 import { FriendList } from './FriendList';
 import { FriendListItem } from './FriendListItem';
+import friendsList from '../data/friends.json';
+
 export const App = () => {
   return (
     <div
@@ -24,7 +26,12 @@ export const App = () => {
           <StatListItem statistics={item} />
         ))}
       </Statistics>
-      <></>
+
+      <FriendList>
+        {friendsList.map(item => (
+          <FriendListItem friendsList={item} />
+        ))}
+      </FriendList>
     </div>
   );
 };
