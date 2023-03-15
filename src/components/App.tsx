@@ -27,18 +27,18 @@ export const App = () => {
 
       <Statistics>
         {statistics.map(item => (
-          <StatListItem statistics={item} />
+          <StatListItem key={item.id} statistics={item} />
         ))}
       </Statistics>
 
       <FriendList>
         {friendsList.map(item => (
-          <FriendListItem friendsList={item} />
+          <FriendListItem key={item.id} friendsList={item} />
         ))}
       </FriendList>
       <TransactionHistory>
         {transactions.map(item => (
-          <TransactionHistoryItem transactionData={item} />
+          <TransactionHistoryItem key={item.id} transactionData={item} />
         ))}
       </TransactionHistory>
     </div>
