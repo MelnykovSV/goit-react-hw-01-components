@@ -1,3 +1,5 @@
+import { UserProfile } from './Profile.styled';
+
 interface IProfile {
   userProfile: {
     username: string;
@@ -17,7 +19,7 @@ export const Profile = ({
     stats: { followers, views, likes },
   },
 }: IProfile) => (
-  <div className="profile">
+  <UserProfile>
     <div className="description">
       <img src={avatar} alt="User avatar" className="avatar" />
       <p className="name">{username}</p>
@@ -39,5 +41,5 @@ export const Profile = ({
         <span className="quantity"> {likes}</span>
       </li>
     </ul>
-  </div>
+  </UserProfile>
 );

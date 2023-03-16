@@ -9,20 +9,13 @@ import { TransactionHistory } from './../TransactionHistory/TransactionHistory';
 import { TransactionHistoryItem } from './../TransactionHistoryItem/TransactionHistoryItem';
 import transactions from '../../data/transactions.json';
 
+import { Container } from './App.styled';
+
 import friendsList from '../../data/friends.json';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
+    <Container>
       <Profile userProfile={user} />
 
       <Statistics>
@@ -41,6 +34,6 @@ export const App = () => {
           <TransactionHistoryItem key={item.id} transactionData={item} />
         ))}
       </TransactionHistory>
-    </div>
+    </Container>
   );
 };
