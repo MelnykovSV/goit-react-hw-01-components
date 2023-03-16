@@ -1,3 +1,13 @@
+interface IProfile {
+  userProfile: {
+    username: string;
+    tag: string;
+    location: string;
+    avatar: string;
+    stats: { followers: number; views: number; likes: number };
+  };
+}
+
 export const Profile = ({
   userProfile: {
     username,
@@ -6,7 +16,7 @@ export const Profile = ({
     avatar,
     stats: { followers, views, likes },
   },
-}) => (
+}: IProfile) => (
   <div className="profile">
     <div className="description">
       <img src={avatar} alt="User avatar" className="avatar" />

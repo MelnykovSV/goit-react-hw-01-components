@@ -1,4 +1,7 @@
-export function TransactionHistory(props) {
+interface ITransactionHistory {
+  children?: React.ReactNode;
+}
+export function TransactionHistory({ children }: ITransactionHistory) {
   return (
     <table className="transaction-history">
       <thead>
@@ -9,7 +12,7 @@ export function TransactionHistory(props) {
         </tr>
       </thead>
 
-      <tbody>{props.children}</tbody>
+      <tbody>{children}</tbody>
     </table>
   );
 }

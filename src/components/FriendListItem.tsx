@@ -1,6 +1,10 @@
+interface IFriendListItem {
+  friendsList: { avatar: string; name: string; isOnline: boolean; id: number };
+}
+
 export function FriendListItem({
   friendsList: { avatar, name, isOnline, id },
-}) {
+}: IFriendListItem) {
   return (
     <li className="item">
       <span className="status">{isOnline}</span>
