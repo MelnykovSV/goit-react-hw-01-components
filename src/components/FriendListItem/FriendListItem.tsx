@@ -1,4 +1,4 @@
-import { FriendListItemContainer } from './FriendListItem_.styled';
+import { FriendListItemContainer } from './FriendListItem.styled';
 interface IFriendListItem {
   friendsList: { avatar: string; name: string; isOnline: boolean; id: number };
 }

@@ -1,9 +1,10 @@
+import { TransactionHistoryContainer } from './TransactionHistory.styled';
 interface ITransactionHistory {
   children?: React.ReactNode;
 }
 export function TransactionHistory({ children }: ITransactionHistory) {
   return (
-    <table className="transaction-history">
+    <TransactionHistoryContainer>
       <thead>
         <tr>
           <th>Type</th>
@@ -13,6 +14,6 @@ export function TransactionHistory({ children }: ITransactionHistory) {
       </thead>
 
       <tbody>{children}</tbody>
-    </table>
+    </TransactionHistoryContainer>
   );
 }

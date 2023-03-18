@@ -1,3 +1,4 @@
+import { TransactionHistoryItemContainer } from './TransactionHistoryItem.styled';
 interface ITransactionHistoryItem {
   transactionData: {
     id: string;
@@ -11,10 +12,10 @@ export function TransactionHistoryItem({
   transactionData: { id, type, amount, currency },
 }: ITransactionHistoryItem) {
   return (
-    <tr>
+    <TransactionHistoryItemContainer>
       <td>{type}</td>
       <td>{amount}</td>
       <td>{currency}</td>
-    </tr>
+    </TransactionHistoryItemContainer>
   );
 }
