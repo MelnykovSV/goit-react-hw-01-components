@@ -1,9 +1,12 @@
 import styled from '@emotion/styled';
-
+interface IProps {
+  a: boolean;
+}
 export const FriendListItemContainer = styled.li`
   width: 100%;
   display: flex;
   gap: 20px;
+  box-sizing: border-box;
   align-items: center;
   border: 1px solid;
   padding: 10px 15px;
@@ -11,7 +14,7 @@ export const FriendListItemContainer = styled.li`
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: ${props => {
+    background-color: ${(props: IProps) => {
       if (props.a) {
         return 'green';
       } else {

@@ -1,4 +1,4 @@
-import css from './Statistics.module.css';
+import { StatisticsContainer } from './Statistics.styled';
 
 interface IStatistics {
   children?: React.ReactNode;
@@ -6,10 +6,10 @@ interface IStatistics {
 
 export function Statistics({ children }: IStatistics) {
   return (
-    <section className={css.statistics}>
+    <StatisticsContainer>
       <h2 className="title">Upload stats</h2>
 
       <ul className="stat-list">{children}</ul>
-    </section>
+    </StatisticsContainer>
   );
 }
