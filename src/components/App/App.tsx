@@ -16,22 +16,49 @@ import friendsList from '../../data/friends.json';
 export const App = () => {
   return (
     <Container>
-      <Profile userProfile={user} />
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        followers={user.stats.followers}
+        views={user.stats.views}
+        likes={user.stats.likes}
+      />
 
       <Statistics>
-        {statistics.map(item => (
-          <StatListItem key={item.id} statistics={item} />
-        ))}
+        {statistics.map(({ id, label, percentage }) => {
+          return (
+            <StatListItem
+              key={id}
+              id={id}
+              label={label}
+              percentage={percentage}
+            />
+          );
+        })}
       </Statistics>
 
       <FriendList>
-        {friendsList.map(item => (
-          <FriendListItem key={item.id} friendsList={item} />
-        ))}
+        {friendsList.map(({ id, avatar, name, isOnline }) => {
+          return (
+            <FriendListItem
+              key={id}
+              avatar={avatar}
+              name={name}
+              isOnline={isOnline}
+            />
+          );
+        })}
       </FriendList>
       <TransactionHistory>
-        {transactions.map(item => (
-          <TransactionHistoryItem key={item.id} transactionData={item} />
+        {transactions.map(({ id, type, amount, currency }) => (
+          <TransactionHistoryItem
+            key={id}
+            type={type}
+            amount={amount}
+            currency={currency}
+          />
         ))}
       </TransactionHistory>
     </Container>

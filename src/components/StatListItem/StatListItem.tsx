@@ -1,12 +1,13 @@
 import { StatListItemContainer } from './StatListItem.styled';
 
 interface IStatListItem {
-  statistics: { id: string; label: string; percentage: number };
+  id: string;
+  label: string;
+  percentage: number;
+  key: string;
 }
 
-export function StatListItem({
-  statistics: { id, label, percentage },
-}: IStatListItem) {
+export function StatListItem({ id, label, percentage }: IStatListItem) {
   return (
     <StatListItemContainer id={id}>
       <span className="label">{label}</span>

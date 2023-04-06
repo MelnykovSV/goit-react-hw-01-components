@@ -1,23 +1,23 @@
 import { UserProfile } from './Profile.styled';
 
 interface IProfile {
-  userProfile: {
-    username: string;
-    tag: string;
-    location: string;
-    avatar: string;
-    stats: { followers: number; views: number; likes: number };
-  };
+  username: string;
+  tag: string;
+  location: string;
+  avatar: string;
+  followers: number;
+  views: number;
+  likes: number;
 }
 
 export const Profile = ({
-  userProfile: {
-    username,
-    tag,
-    location,
-    avatar,
-    stats: { followers, views, likes },
-  },
+  username,
+  tag,
+  location,
+  avatar,
+  followers,
+  views,
+  likes,
 }: IProfile) => (
   <UserProfile>
     <div className="description">

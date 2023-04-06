@@ -1,11 +1,12 @@
 import { FriendListItemContainer } from './FriendListItem.styled';
 interface IFriendListItem {
-  friendsList: { avatar: string; name: string; isOnline: boolean; id: number };
+  key: number;
+  avatar: string;
+  name: string;
+  isOnline: boolean;
 }
 
-export function FriendListItem({
-  friendsList: { avatar, name, isOnline, id },
-}: IFriendListItem) {
+export function FriendListItem({ avatar, name, isOnline }: IFriendListItem) {
   return (
     <FriendListItemContainer a={isOnline}>
       <span className="status">{isOnline}</span>
