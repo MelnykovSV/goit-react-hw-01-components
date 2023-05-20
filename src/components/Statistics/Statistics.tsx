@@ -5,7 +5,7 @@ import { IStatistics } from '../../interfaces';
 
 export function Statistics({ stats }: IStatistics) {
   return (
-    <StatisticsContainer>
+    <StatisticsContainer className="statistics">
       <h2 className="title">Upload stats</h2>
       <ul className="stat-list">
         {stats.map(({ id, label, percentage }) => {

@@ -3,7 +3,7 @@ import { ITransactionHistory } from '../../interfaces';
 
 export function TransactionHistory({ transactions }: ITransactionHistory) {
   return (
-    <TransactionHistoryContainer>
+    <TransactionHistoryContainer className="transaction-history">
       <thead>
         <tr>
           <th>Type</th>

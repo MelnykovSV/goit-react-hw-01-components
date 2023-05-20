@@ -11,7 +11,7 @@ export const Profile = ({
   views,
   likes,
 }: IProfile) => (
-  <UserProfile>
+  <UserProfile className="profile">
     <div className="description">
       <img src={avatar} alt="User avatar" className="avatar" />
       <p className="name">{username}</p>
