@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 interface IProps {
   a: boolean;
 }
-export const FriendListItemContainer = styled.li`
+export const Container = styled.li`
   width: 100%;
   display: flex;
   gap: 20px;

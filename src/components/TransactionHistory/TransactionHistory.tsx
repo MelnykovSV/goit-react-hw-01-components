@@ -1,8 +1,7 @@
 import { TransactionHistoryContainer } from './TransactionHistory.styled';
-interface ITransactionHistory {
-  children?: React.ReactNode;
-}
-export function TransactionHistory({ children }: ITransactionHistory) {
+import { ITransactionHistory } from '../../interfaces';
+
+export function TransactionHistory({ transactions }: ITransactionHistory) {
   return (
     <TransactionHistoryContainer>
       <thead>
@@ -13,7 +12,17 @@ export function TransactionHistory({ children }: ITransactionHistory) {
         </tr>
       </thead>
 
-      <tbody>{children}</tbody>
+      <tbody>
+        {transactions.map(({ id, type, amount, currency }) => {
+          return (
+            <tr key={id}>
+              <td>{type}</td>
+              <td>{amount}</td>
+              <td>{currency}</td>
+            </tr>
+          );
+        })}
+      </tbody>
     </TransactionHistoryContainer>
   );
 }

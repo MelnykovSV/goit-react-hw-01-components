@@ -1,14 +1,6 @@
 import { UserProfile } from './Profile.styled';
 
-interface IProfile {
-  username: string;
-  tag: string;
-  location: string;
-  avatar: string;
-  followers: number;
-  views: number;
-  likes: number;
-}
+import { IProfile } from '../../interfaces';
 
 export const Profile = ({
   username,

@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './components/App/App';
 import './index.css';
-// import { Profile } from './components/Profile';
-// import user from './data/user.json';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+
+root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-///1111

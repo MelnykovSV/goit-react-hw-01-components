@@ -14,4 +14,13 @@ export const TransactionHistoryContainer = styled.table`
     padding-top: 10px;
     padding-bottom: 10px;
   }
+
+  tbody {
+    tr {
+      background-color: white;
+      :nth-of-type(2n) {
+        background-color: #d7cfcf;
+      }
+    }
+  }
 `;

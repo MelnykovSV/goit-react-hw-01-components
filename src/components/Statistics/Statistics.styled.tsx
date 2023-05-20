@@ -19,5 +19,19 @@ export const StatisticsContainer = styled.section`
     margin: 0;
     width: 100%;
     background-color: yellow;
+    li {
+      font-weight: 700;
+      color: white;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        display: block;
+      }
+    }
   }
 `;
