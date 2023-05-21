@@ -1,7 +1,15 @@
-export interface IFriendList {
-  friends: { avatar: string; name: string; isOnline: boolean; id: number }[];
+export interface IFriendInfo {
+  avatar: string;
+  name: string;
+  isOnline: boolean;
+  id: number;
 }
-export interface IFriendListItem {
+
+export interface IFriendList {
+  friends: IFriendInfo[];
+}
+
+export interface IFriendListItemProps {
   key: number;
   avatar: string;
   name: string;
@@ -18,15 +26,23 @@ export interface IProfile {
   likes: number;
 }
 
+export interface ISingleStat {
+  id: string;
+  label: string;
+  percentage: number;
+}
+
 export interface IStatistics {
-  stats: { id: string; label: string; percentage: number }[];
+  stats: ISingleStat[];
+}
+
+export interface ITransaction {
+  id: string;
+  type: string;
+  amount: string;
+  currency: string;
 }
 
 export interface ITransactionHistory {
-  transactions: {
-    id: string;
-    type: string;
-    amount: string;
-    currency: string;
-  }[];
+  transactions: ITransaction[];
 }
