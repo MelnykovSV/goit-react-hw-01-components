@@ -5,7 +5,7 @@ export interface IFriendInfo {
   id: number;
 }
 
-export interface IFriendList {
+export interface IFriendListProps {
   friends: IFriendInfo[];
 }
 

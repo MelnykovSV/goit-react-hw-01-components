@@ -1,8 +1,8 @@
 import { Container } from './FriendList.styled';
 import { FriendListItem } from '../FriendListItem/FriendListItem';
-import { IFriendList } from '../../interfaces';
+import { IFriendListProps } from '../../interfaces';
 
-export function FriendList({ friends }: IFriendList) {
+export function FriendList({ friends }: IFriendListProps) {
   return (
     <Container className="friend-list">
       {friends.map(({ avatar, name, isOnline, id }) => (
